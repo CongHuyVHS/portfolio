@@ -1,0 +1,20 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: black;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+section {
+  min-height: 100vh;
+  padding-top: 80px;
+}
