@@ -1,1 +1,115 @@
-<p>contact works!</p>
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+
+    <div class="section-header">
+      <span class="section-index">// 05</span>
+      <h2 class="section-title">ESTABLISH_LINK<span class="cursor-blink">&#9646;</span></h2>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-left">
+        <p class="contact-intro">
+          Currently open to internships, part-time roles, and collaborative projects.
+          Fluent in English and French. Drop a transmission and I'll get back to you.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:conghuykieu2005@gmail.com" class="contact-item">
+            <div class="contact-icon">&#9993;</div>
+            <div class="contact-detail">
+              <span class="contact-label">// EMAIL</span>
+              <span class="contact-value">conghuykieu2005&#64;gmail.com</span>
+            </div>
+            <span class="contact-arrow">&#8594;</span>
+          </a>
+
+          <a href="https://github.com/CongHuyVHS" target="_blank" class="contact-item">
+            <div class="contact-icon">&#9651;</div>
+            <div class="contact-detail">
+              <span class="contact-label">// GITHUB</span>
+              <span class="contact-value">github.com/CongHuyVHS</span>
+            </div>
+            <span class="contact-arrow">&#8594;</span>
+          </a>
+
+          <a href="tel:5144046882" class="contact-item">
+            <div class="contact-icon">&#9670;</div>
+            <div class="contact-detail">
+              <span class="contact-label">// PHONE</span>
+              <span class="contact-value">514-404-6882</span>
+            </div>
+            <span class="contact-arrow">&#8594;</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper">
+        <div class="form-header">
+          <span class="form-tag">&lt;TRANSMISSION&gt;</span>
+        </div>
+
+        <form class="contact-form" (submit)="onSubmit($event)">
+          <div class="field-group">
+            <label class="field-label" for="name">SENDER_ID</label>
+            <input
+              id="name"
+              type="text"
+              class="field-input"
+              placeholder="Your name"
+              [(ngModel)]="formData.name"
+              name="name"
+            />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="email">RETURN_ADDR</label>
+            <input
+              id="email"
+              type="email"
+              class="field-input"
+              placeholder="your@email.com"
+              [(ngModel)]="formData.email"
+              name="email"
+            />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="message">MESSAGE_BODY</label>
+            <textarea
+              id="message"
+              class="field-input field-textarea"
+              placeholder="Your message..."
+              rows="5"
+              [(ngModel)]="formData.message"
+              name="message"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span class="btn-text">TRANSMIT</span>
+            <span class="btn-arrow">&#62;&#62;</span>
+          </button>
+
+          <div *ngIf="submitted" class="success-msg">
+            <span class="success-icon">&#10003;</span>
+            TRANSMISSION RECEIVED. WILL RESPOND SHORTLY.
+          </div>
+        </form>
+
+        <div class="form-footer">
+          <span class="form-tag">&lt;/TRANSMISSION&gt;</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span class="footer-copy">&#169; 2025 CONG HUY KIEU</span>
+      <span class="footer-sep">//</span>
+      <span class="footer-tag">LASALLE COLLEGE</span>
+      <span class="footer-sep">//</span>
+      <span class="footer-tag">MTL, QC</span>
+    </div>
+
+  </div>
+</section>
