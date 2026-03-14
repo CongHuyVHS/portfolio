@@ -170,3 +170,47 @@
     grid-template-columns: 1fr;
   }
 }
+
+.volunteer-section {
+  margin-top: 24px;
+  padding: 28px;
+  border: 1px solid rgba(255, 0, 110, 0.15);
+  background: var(--dark-card);
+}
+
+.volunteer-card {
+  margin-top: 8px;
+}
+
+.vol-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.vol-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--neon-cyan);
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 6px rgba(0, 245, 255, 0.3);
+}
+
+.vol-date {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--neon-pink);
+  letter-spacing: 0.1em;
+}
+
+.vol-desc {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}

@@ -1,0 +1,267 @@
+.contact-section {
+  padding: 100px 40px 60px;
+  min-height: 100vh;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 60px;
+}
+
+.section-index {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--neon-pink);
+  letter-spacing: 0.2em;
+  display: block;
+  margin-bottom: 8px;
+  text-shadow: 0 0 8px var(--neon-pink);
+}
+
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.cursor-blink {
+  color: var(--neon-cyan);
+  animation: blink 1s step-end infinite;
+  text-shadow: 0 0 8px var(--neon-cyan);
+}
+
+.header-line {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon-cyan), transparent);
+  box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 80px;
+}
+
+.contact-intro {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  letter-spacing: 0.02em;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid rgba(0, 245, 255, 0.08);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: rgba(0, 245, 255, 0.01);
+}
+
+.contact-item:hover {
+  border-color: rgba(0, 245, 255, 0.35);
+  background: rgba(0, 245, 255, 0.04);
+  transform: translateX(8px);
+}
+
+.contact-icon {
+  font-size: 1.1rem;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 8px var(--neon-cyan);
+  width: 24px;
+  text-align: center;
+}
+
+.contact-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.contact-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--neon-pink);
+  letter-spacing: 0.2em;
+}
+
+.contact-value {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.03em;
+}
+
+.contact-arrow {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.contact-item:hover .contact-arrow {
+  opacity: 1;
+  color: var(--neon-cyan);
+  transform: translateX(4px);
+}
+
+/* Form */
+.contact-form-wrapper {
+  border: 1px solid rgba(0, 245, 255, 0.15);
+  background: var(--dark-card);
+  animation: pulse-border 5s ease-in-out infinite;
+}
+
+.form-header, .form-footer {
+  padding: 10px 16px;
+  background: rgba(0, 245, 255, 0.03);
+  border-bottom: 1px solid rgba(0, 245, 255, 0.08);
+}
+
+.form-footer {
+  border-bottom: none;
+  border-top: 1px solid rgba(0, 245, 255, 0.08);
+}
+
+.form-tag {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.7rem;
+  color: rgba(0, 245, 255, 0.4);
+  letter-spacing: 0.1em;
+}
+
+.contact-form {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--neon-pink);
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 6px var(--neon-pink);
+}
+
+.field-input {
+  background: rgba(0, 245, 255, 0.02);
+  border: 1px solid rgba(0, 245, 255, 0.15);
+  color: var(--text-primary);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  padding: 12px 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.04em;
+  resize: none;
+}
+
+.field-input::placeholder {
+  color: rgba(96, 125, 139, 0.5);
+  font-style: italic;
+}
+
+.field-input:focus {
+  border-color: rgba(0, 245, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.08), inset 0 0 10px rgba(0, 245, 255, 0.02);
+  background: rgba(0, 245, 255, 0.04);
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 28px;
+  background: transparent;
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.1);
+  text-shadow: 0 0 8px rgba(0, 245, 255, 0.5);
+}
+
+.submit-btn:hover {
+  background: rgba(0, 245, 255, 0.08);
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-arrow {
+  font-size: 0.9rem;
+}
+
+.success-msg {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.75rem;
+  color: #00ff88;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  background: rgba(0, 255, 136, 0.03);
+}
+
+.success-icon {
+  margin-right: 8px;
+}
+
+/* Footer */
+.footer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(0, 245, 255, 0.08);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.15em;
+}
+
+.footer-sep {
+  color: rgba(0, 245, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
