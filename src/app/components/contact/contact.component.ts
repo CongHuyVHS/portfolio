@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +12,8 @@ import { CommonModule } from '@angular/common';
 })
 export class ContactComponent {
   submitted = false;
+  sending = false;
+  error = false;
 
   formData = {
     name: '',
@@ -18,12 +21,25 @@ export class ContactComponent {
     message: ''
   };
 
+  constructor(private http: HttpClient) {}
+
   onSubmit(event: Event) {
     event.preventDefault();
-    // Here you'd hook up a real email service (e.g. EmailJS, Formspree, etc.)
-    console.log('Form submitted:', this.formData);
-    this.submitted = true;
-    this.formData = { name: '', email: '', message: '' };
-    setTimeout(() => this.submitted = false, 5000);
+    this.sending = true;
+    this.error = false;
+
+    this.http.post('https://formspree.io/f/xnjgbely', this.formData)
+      .subscribe({
+        next: () => {
+          this.sending = false;
+          this.submitted = true;
+          this.formData = { name: '', email: '', message: '' };
+          setTimeout(() => this.submitted = false, 5000);
+        },
+        error: () => {
+          this.sending = false;
+          this.error = true;
+        }
+      });
   }
 }

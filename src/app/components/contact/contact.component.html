@@ -85,15 +85,19 @@
               name="message"
             ></textarea>
           </div>
-
-          <button type="submit" class="submit-btn">
-            <span class="btn-text">TRANSMIT</span>
+          <button type="submit" class="submit-btn" [disabled]="sending">
+            <span class="btn-text">{{ sending ? 'SENDING...' : 'TRANSMIT' }}</span>
             <span class="btn-arrow">&#62;&#62;</span>
           </button>
 
           <div *ngIf="submitted" class="success-msg">
             <span class="success-icon">&#10003;</span>
             TRANSMISSION RECEIVED. WILL RESPOND SHORTLY.
+          </div>
+
+          <div *ngIf="error" class="success-msg" style="color: var(--neon-pink); border-color: rgba(255,0,110,0.2);">
+            <span class="success-icon">&#10007;</span>
+            TRANSMISSION FAILED. PLEASE TRY AGAIN.
           </div>
         </form>
 
